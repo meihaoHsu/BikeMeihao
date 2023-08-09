@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6f3a4849-1d92-49f8-a86f-af5c34df5fd7" name="bike meihao demo">
+        <fileTransfer rootFolder="/var/www/bike.meihao.shopping/htdocs" accessType="SFTP" host="139.162.118.87" port="22" sshConfigId="735ad19a-e6d0-4824-8b60-130ef2446982" sshConfig="meihao demo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
