@@ -98,6 +98,7 @@ class CustomFunction
         add_action( 'init', [$this, 'create_custom_post_type'], 0 );//新增文章類型-維修站點
         add_action('add_meta_boxes', [$this, 'add_meta_boxes' ] ,20); //維修站點-內容資料
         add_action('init', [$this,'customer_post_taxonomy'], 0 );//維修站點-自定義分類
+        add_action('save_post', [$this, 'save_data_for_custom'],1,100); //儲存post增加欄位
 
 
     }
@@ -111,14 +112,13 @@ class CustomFunction
         );
         $args = array(
             'labels' 				=> $labels,
-            'meta_box_cb' => 'post_categories_meta_box',
             'menu_icon'				=> 'dashicons-admin-tools',
             'public' 				=> true, 'publicly_queryable' 	=> true,
             'show_ui' 				=> true, 'show_admin_column'     => true,
             'query_var' 			=> true, 'capability_type' 		=> 'post',
             'hierarchical' 			=> false, 'menu_position' 		=> null,
             'has_archive'           => true, 'exclude_from_search'   => true,
-            'supports' 				=> array(''),
+            'supports' 				=> array('title'),
         );
         register_post_type( 'repair', $args );
     }
@@ -126,20 +126,47 @@ class CustomFunction
         add_meta_box( 'repair-detail', '維修站點內容',  [$this,'repair_detail_meta_box'], 'repair', 'normal' );
     }
     public function customer_post_taxonomy(){
-        register_taxonomy( 'brand', 'repair', array(
-            'label' => '品牌', 'hierarchical' => true,
+        register_taxonomy( 'brand', ['repair','product'], array(
+            'label' => '品牌', 'hierarchical' => true,'show_admin_column' => true,
+            'show_in_nav_menus' => true,
+        ));
+        register_taxonomy( 'model', 'product', array(
+            'label' => '車種類型', 'hierarchical' => true,'show_admin_column' => true,
+            'show_in_nav_menus' => true,
         ));
         register_taxonomy( 'repair-cat', 'repair', array(
-            'label' => '分類', 'hierarchical' => true,
+            'label' => '功能分類', 'hierarchical' => true,'show_admin_column' => true,
+            'show_in_nav_menus' => true,
+        ));
+        register_taxonomy( 'city', 'repair', array(
+            'label' => '城市', 'hierarchical' => true,'show_admin_column' => true,
+            'show_in_nav_menus' => true,
         ));
     }
     public function repair_detail_meta_box($post){
         ob_start();
         include_once __DIR__ . "/meihao-custom-file/meihao-repair-detail.php";
         $template = ob_get_contents();
-        error_log(print_r($template,1));
         ob_end_clean();
         echo $template;
+    }
+    public function save_data_for_custom($post_id){
+        $post_type = get_post_type($post_id);
+        if($post_type == 'repair'){
+            if(isset($_POST['repair_title'])){
+                $subtitle_meta_box = $_POST['repair_title'];
+                update_post_meta($post_id, 'repair_title', $subtitle_meta_box);
+            }
+            if(isset($_POST['repair_phone'])){
+                $subtitle_meta_box = $_POST['repair_phone'];
+                update_post_meta($post_id, 'repair_phone', $subtitle_meta_box);
+            }
+            if(isset($_POST['repair_address'])){
+                $subtitle_meta_box = $_POST['repair_address'];
+                update_post_meta($post_id, 'repair_address', $subtitle_meta_box);
+            }
+        }
+
     }
 
     public function set_shop_manager_editable_roles($roles){
