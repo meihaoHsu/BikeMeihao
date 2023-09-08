@@ -98,8 +98,7 @@ class CustomFunction
         add_action( 'init', [$this, 'create_custom_post_type'], 0 );//新增文章類型-維修站點
         add_action('add_meta_boxes', [$this, 'add_meta_boxes' ] ,20); //維修站點-內容資料
         add_action('init', [$this,'customer_post_taxonomy'], 0 );//維修站點-自定義分類
-        add_action('save_post', [$this, 'save_data_for_custom'],1,100); //儲存post增加欄位
-
+        add_action('save_post', [$this, 'save_data_for_custom'],1,100); //儲存自訂內容
 
     }
     public function create_custom_post_type(){
