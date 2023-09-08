@@ -93,12 +93,53 @@ class CustomFunction
 
 
         /** 客製化功能*/
-
-
         add_action('woocommerce_after_checkout_billing_form',[$this,'add_person_count'],10);
 
+        add_action( 'init', [$this, 'create_custom_post_type'], 0 );//新增文章類型-維修站點
+        add_action('add_meta_boxes', [$this, 'add_meta_boxes' ] ,20); //維修站點-內容資料
+        add_action('init', [$this,'customer_post_taxonomy'], 0 );//維修站點-自定義分類
 
 
+    }
+    public function create_custom_post_type(){
+        $labels = array(
+            'name'               => '維修站點', 'all_items'          => '所有維修站點',
+            'add_new'            => '新增維修站點', 'add_new_item'       => '增加維修站點',
+            'edit_item'          => '編輯維修站點', 'view_item'          => '檢視維修站點',
+            'search_items'       => '搜尋維修站點', 'not_found'          => '沒有資料',
+            'not_found_in_trash' => '沒有於回收桶之中找到', 'parent_item_colon' 	=> '',
+        );
+        $args = array(
+            'labels' 				=> $labels,
+            'meta_box_cb' => 'post_categories_meta_box',
+            'menu_icon'				=> 'dashicons-admin-tools',
+            'public' 				=> true, 'publicly_queryable' 	=> true,
+            'show_ui' 				=> true, 'show_admin_column'     => true,
+            'query_var' 			=> true, 'capability_type' 		=> 'post',
+            'hierarchical' 			=> false, 'menu_position' 		=> null,
+            'has_archive'           => true, 'exclude_from_search'   => true,
+            'supports' 				=> array(''),
+        );
+        register_post_type( 'repair', $args );
+    }
+    public function add_meta_boxes(){
+        add_meta_box( 'repair-detail', '維修站點內容',  [$this,'repair_detail_meta_box'], 'repair', 'normal' );
+    }
+    public function customer_post_taxonomy(){
+        register_taxonomy( 'brand', 'repair', array(
+            'label' => '品牌', 'hierarchical' => true,
+        ));
+        register_taxonomy( 'repair-cat', 'repair', array(
+            'label' => '分類', 'hierarchical' => true,
+        ));
+    }
+    public function repair_detail_meta_box($post){
+        ob_start();
+        include_once __DIR__ . "/meihao-custom-file/meihao-repair-detail.php";
+        $template = ob_get_contents();
+        error_log(print_r($template,1));
+        ob_end_clean();
+        echo $template;
     }
 
     public function set_shop_manager_editable_roles($roles){
