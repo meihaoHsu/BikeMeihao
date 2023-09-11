@@ -1,0 +1,87 @@
+/**
+ * CSS => Multiple Taxonomy Filter Horizontal Dropdown
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/filter/multiple-taxonomy-filter-hor.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+div#caf-multiple-taxonomy-filter-hor {
+    padding: 0 20px;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+select.caf_select_multi {
+    box-sizing: border-box;
+    display: -webkit-inline-box;
+    padding: 5px 8px;
+    text-transform: capitalize;
+}
+div#caf-multiple-taxonomy-filter-hor select:last-of-type {
+ margin-right:0;
+} 
+/*.caf_multi_tax3 select {
+    width: 32.5%;
+    margin-right: 1%;
+}
+.caf_multi_tax4 select {
+    width: 24.2%;
+    margin-right:1%;
+}
+.caf_multi_tax5 select {
+    width: 19%;
+    margin-right:1%;
+}
+.caf_multi_tax6 select {
+    width: 15.7%;
+    margin-right:1%;
+}
+.caf_multi_tax7 select {
+    width: 13.3%;
+    margin-right:1%;
+}*/
+
+select.caf_select_multi {
+    box-sizing: border-box;
+    display: -webkit-inline-box;
+    padding: 5px 8px;
+    text-transform: capitalize;
+    margin-right: 10px;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+button.caf_select_multi_btn {
+    display: inline-block;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    background: #1d1d1d;
+    color: #fff;
+ box-shadow: none;
+ text-decoration: none;
+ cursor: pointer;
+ text-align: center;
+}
+div#caf-multiple-taxonomy-filter-hor.btn-enable select:last-of-type {
+    margin-right: 10px;
+}
+select.caf_select_multi option:first-child {
+    font-weight: bold;
+    /* background: beige; */
+}
+@media only screen and (max-width:600px) {
+ select.caf_select_multi,button.caf_select_multi_btn {
+  display: inline-block;
+  width: 100%;
+ }
+}

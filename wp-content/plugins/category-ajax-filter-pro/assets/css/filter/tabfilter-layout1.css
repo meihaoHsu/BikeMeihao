@@ -1,0 +1,146 @@
+/**
+ * CSS => Tab Filter Layout
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/filter/tabfilter-layout1.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+
+ul.caf-tabfilter-layout1 {
+    position: relative;
+    display: -ms-flexbox;
+    /* display: -webkit-flex; */
+    display: -moz-flex;
+    display: -ms-flex;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    margin: 0 !important;
+    padding:0 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 50px;
+    float: left;
+}
+ul.caf-tabfilter-layout1 li {
+ list-style: none;
+ position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0;
+    text-align: center;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+ margin: 0 !important;
+    padding: 0 !important;
+ width: 19%;
+  float:left;
+     height: 50px;
+}
+ul.caf-tabfilter-layout1 li::marker {
+ display:none;
+}
+
+ul.caf-tabfilter-layout1 ul li.tab-current a, ul.caf-tabfilter-layout1 li.tab-current a:hover {
+    color: #2CC185;
+}
+
+ul.caf-tabfilter-layout1 li a {
+ padding: 7px 1.5em 7px 0.3em;
+    color: #0d9564;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+ position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 2.5;
+ width: 100%;
+ text-decoration: none !important;
+ box-shadow: none !important;
+ border:none !important;
+}
+
+ul.caf-tabfilter-layout1 li a.active::after {
+    background: #fff;
+    color: #0d9564;
+}
+ul.caf-tabfilter-layout1 li a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    outline: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+    background: #2CC185;
+    /*box-shadow: inset 0 -3px 3px rgb(0 0 0 / 5%);*/
+    content: '';
+    -webkit-transform: perspective(5px) rotateX(
+0.93deg
+) translateZ(-1px);
+    transform: perspective(5px) rotateX(
+0.93deg
+) translateZ(-1px);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+div#caf-post-layout-container.tabfilter-layout1 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.tabfilter-layout1 #manage-ajax-response {
+ background: #fff;
+ top: 0px;
+}
+
+.caf-scroller {
+    display: inline-block;
+    width: 2.5%;
+    text-align: center;
+    
+}
+.caf-scroller i {
+    height: 50px;
+    padding: 17px 0;
+    cursor: pointer;
+    font-size: 16px;
+ width:100%;
+}
+.caf-scroller i:hover {
+    background: #f7f7f7;
+}
+.caf-scroll-right {
+ float: right;
+}
+.caf-scroll-left {
+ float: left;
+}
+.caf-tab-hide {
+ display:none !important;
+}
+.tabfilter-layout1 .caf-search-bar {
+    background: #fff;
+    width: 100%;
+    display: inline-block;
+    padding-top: 20px;
+}

@@ -1,0 +1,45 @@
+/**
+ * CSS => Alphabetical Navigation
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/filter/alphabetical-Layout.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+div#caf-alphabetical-layout {
+    display: block;
+    width: 100%;
+  text-align: center;
+ margin: auto;
+}
+div#caf-alphabetical-layout ul {
+    display: inline-block;
+    list-style: none !important;
+    margin: auto;
+    padding: 0;
+    border: none;
+}
+div#caf-alphabetical-layout ul li {
+    list-style: none !important;
+    display: inline-block;
+    padding: 0px 12px;
+    border: 1px solid;
+    margin: 0 0px 5px;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    border-right: none;
+ cursor:pointer;
+ float: left;
+}
+div#caf-alphabetical-layout ul li:last-child {
+ border-right:1px solid;
+}
+div#caf-alphabetical-layout ul li:before {
+ display:none !important;
+}

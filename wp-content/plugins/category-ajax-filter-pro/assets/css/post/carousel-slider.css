@@ -1,0 +1,103 @@
+/**
+ * Carousel Slider => Carousel Slider
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/post/carousel-slider.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+.carousel-slider .flexslider.carousel {
+    display: inline-block;
+    width: 100%;
+}
+.carousel-slider .flexslider {
+background: none !important;
+border:none !important;
+}
+.carousel-slider .flexslider .slides {
+ list-style: none !important;
+ padding: 0 !important;
+ margin: 0!important;
+}
+.carousel-slider .flexslider .slides > li .carousel-container
+{
+background: #fff;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ box-shadow: 0 20px 10px -11px #807c7c;
+ background-size:cover;
+ position:relative;
+ height: 300px;
+}
+.carousel-slider .flexslider .manage-content-carousel {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+  flex-direction: column;
+ padding: 0 15px;
+}
+.carousel-slider .flexslider .image-carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #33333396;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+.carousel-slider .carousel-title {
+    padding: 10px 0px 0px;
+}
+.carousel-slider .carousel-title h5 {
+    padding-bottom: 5px;
+}
+
+.carousel-slider li h5 a {
+    font-weight: bold;
+ display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+ overflow: hidden;
+ line-height: 1.2em;
+ padding: 0 10px;
+}
+.carousel-slider .carousel-desc {
+  line-height: 1.4em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.carousel-slider ul.flex-direction-nav {
+   list-style:none !important;
+}
+.carousel-slider .flex-direction-nav a:before {
+ font-size:28px;
+
+}
+
+.carousel-slider .flex-direction-nav a {
+ height:35px;
+}
+.carousel-slider #manage-ajax-response {
+    padding: 0;
+}
+.carousel-slider .flexslider.carousel {
+ margin-bottom: 10px;
+}

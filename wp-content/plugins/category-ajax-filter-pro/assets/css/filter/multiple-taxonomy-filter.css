@@ -1,0 +1,129 @@
+/**
+ * CSS => Multiple Taxonomy Filter
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/filter/multiple-taxonomy-filter.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+
+div#caf-post-layout-container.multiple-taxonomy-filter {
+    width: 100%;
+    display: inline-block;
+ padding: 15px;
+}
+.multiple-taxonomy-filter div#caf-multiple-taxonomy-filter {
+    float: left;
+    display: inline-block;
+ width:20%;
+}
+.multiple-taxonomy-filter div#manage-ajax-response {
+    float: right;
+    width: 80%;
+    padding-top: 0;
+}
+div#caf-multiple-taxonomy-filter ul {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 10px;
+    /* background: #7ecfc0; */
+    background: #fff;
+    border-radius: 4px;
+  -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+}
+.caf-mtf-layout h3.tax-heading {
+       font-family: Roboto Condensed;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #3c3b37;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    justify-content: space-between;
+}
+li.mtf-li-child.caf-first-child {
+    margin-top: 10px;
+}
+.caf-mtf-layout h3.tax-heading i {
+    font-size: 14px;
+    float: right;
+    margin-right: 5px;
+    color: #3c3b37;
+}
+
+div#caf-multiple-taxonomy-filter ul li label {
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 18px;
+ color:#333;
+
+}
+div#caf-multiple-taxonomy-filter .mtf-terms.check_box {
+    position: absolute;
+    opacity: 0;
+}
+div#caf-multiple-taxonomy-filter ul li label:before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    font-weight: 900;
+    font-size: 16px;
+    padding: 0;
+    margin-right: 0;
+    content: "\f1db";
+    color: rgba(0, 0, 0, 0.2);
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    position: absolute;
+    right: 20px;
+    margin-top: 0px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+div#caf-multiple-taxonomy-filter ul li input[type="checkbox"]:checked + label::before {
+    content: "\f058";
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    color: #7ecfc0;
+}
+div#caf-multiple-taxonomy-filter ul.caf-slide-toggle li {
+ display:none;
+}
+.caf-slide-toggle {
+
+}
+
+@media only screen and (max-width:768px) {
+ .multiple-taxonomy-filter div#caf-multiple-taxonomy-filter,.multiple-taxonomy-filter div#manage-ajax-response {
+  width:100%;
+ }
+}

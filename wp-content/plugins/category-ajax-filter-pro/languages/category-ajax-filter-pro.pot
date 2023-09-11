@@ -1,0 +1,348 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Category Ajax Filter PRO\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-25 06:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.3\n"
+"X-Domain: category-ajax-filter-pro"
+
+#: admin/tabs/general/taxonomies-terms.php:69
+msgid "All"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:7
+msgid "All text is default in filter layouts."
+msgstr ""
+
+#: admin/tabs/analytics.php:2
+msgid "Analytics"
+msgstr ""
+
+#: admin/tabs/appearance/meta-info.php:4
+msgid "Author, Date, Comments, Categories show/hide settings."
+msgstr ""
+
+#: admin/tabs/general/default-term.php:37
+msgid "Auto Select Default Term"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:30 admin/tabs/advanced/scroll.php:41
+msgid ""
+"By default page scrolls to #caf-post-layout-container. For fixed header you "
+"can add the scroll top value to fix the issue."
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:33
+msgid "Capitalize"
+msgstr ""
+
+#. Name of the plugin
+msgid "Category Ajax Filter PRO"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:17
+#: admin/tabs/appearance/translation.php:27
+msgid "Change text of Dropdown Filter."
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:37
+msgid "Change text of Read More Button."
+msgstr ""
+
+#: admin/tabs/analytics.php:90
+msgid "clicks"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:14
+msgid "Default"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:7
+msgid "Default All Text"
+msgstr ""
+
+#: admin/tabs/general/default-term.php:52
+msgid "Default Term"
+msgstr ""
+
+#: admin/tabs/general/default-term.php:22
+msgid "Display 'All' button in filter"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:27
+msgid "Dropdown Filter - everything"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:17
+msgid "Dropdown Filter - I want to Check out"
+msgstr ""
+
+#: admin/tabs/analytics.php:151
+msgid "Enable/Disable Analytics"
+msgstr ""
+
+#: admin/tabs/appearance/filter-more-button.php:7
+msgid "Enable/Disable Filter More Button"
+msgstr ""
+
+#: admin/tabs/general/default-term.php:22
+msgid "Enable/Disable filter's 'All' button."
+msgstr ""
+
+#: admin/tabs/appearance/pagination-enable.php:5
+msgid "Enable/Disable Pagination"
+msgstr ""
+
+#: admin/tabs/appearance/pagination-enable.php:5
+msgid "Enable/Disable Pagination according to your needs."
+msgstr ""
+
+#: admin/tabs/appearance/filter-more-button.php:36
+msgid "Enable/Disable Search Bar"
+msgstr ""
+
+#: admin/functions.php:807
+msgid "Filter Layout is not Available."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Filter posts/custom post types by category without page reload.Easy to "
+"sort/filter and display posts on page with Ajax. It Supports Divi, Elementor "
+"and other page builders."
+msgstr ""
+
+#: admin/tabs/layouts/multiple-checkbox-relation.php:6
+msgid "Filter Submit Button Text"
+msgstr ""
+
+#: admin/tabs/analytics.php:15
+msgid "Filter Your Analytics"
+msgstr ""
+
+#: admin/tabs/analytics.php:15
+msgid "Filter your analytics."
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:12
+msgid "Font Family"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:40
+msgid "Font Size"
+msgstr ""
+
+#: admin/tabs/analytics.php:163
+msgid "How Reset Works?"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://trustyplugins.com"
+msgstr ""
+
+#: admin/tabs/analytics.php:151
+msgid ""
+"If Analytics is not enabled then Please enable analytics and wait for the "
+"refreshed data. Data will load when any user interact with this filter from "
+"frontend."
+msgstr ""
+
+#: admin/tabs/general/default-term.php:37
+msgid ""
+"If shortcode is placed on the category page then it will auto select that "
+"specific term as default on page load."
+msgstr ""
+
+#: admin/tabs/appearance/filter-more-button.php:7
+msgid ""
+"If You have number of categories in filter to show then you can manage them "
+"with more button. It will show the categories in dropdown. Also set more "
+"button after specific number of categories."
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:34
+msgid "Lowercase"
+msgstr ""
+
+#: admin/tabs/appearance/meta-info.php:4
+msgid "Meta Info Show/Hide"
+msgstr ""
+
+#: admin/tabs/layouts/multiple-checkbox-relation.php:6
+msgid "Name of the submit button."
+msgstr ""
+
+#: admin/functions.php:827
+msgid "Nothing Found, ID Mismatched."
+msgstr ""
+
+#: admin/functions.php:824
+msgid "Nothing Found, Missing id as an argument."
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:5
+msgid "Post Description Font "
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:37
+msgid "Post Layout - Read More"
+msgstr ""
+
+#: admin/tabs/appearance/sorting.php:10
+msgid "Posts Order By"
+msgstr ""
+
+#: admin/tabs/appearance/sorting.php:29
+msgid "Posts Order Type"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:44
+msgid "px"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:30
+msgid "Scroll Position for Desktop"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:41
+msgid "Scroll Position for Mobile"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:11
+msgid "Scroll To Container"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:3
+msgid "Scroll to Container"
+msgstr ""
+
+#: includes/layouts/filter/search/search-layout1.php:2
+#: includes/layouts/filter/search/search-layout2.php:3
+msgid "Search"
+msgstr ""
+
+#: admin/tabs/appearance/filter-more-button.php:36
+msgid "Search field to search through the posts."
+msgstr ""
+
+#: includes/layouts/filter/search/search-layout1.php:2
+#: includes/layouts/filter/search/search-layout2.php:3
+msgid "Search Here...."
+msgstr ""
+
+#: admin/functions.php:824 admin/functions.php:827
+msgid "See Documentation"
+msgstr ""
+
+#: admin/tabs/import/import.php:5
+msgid ""
+"Select post layout and click on import button, It will auto import all "
+"settings,colors etc like demo preview."
+msgstr ""
+
+#: admin/tabs/import/import.php:5
+msgid "Select Post Layout to Import"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:5
+msgid "Select Properties for post description."
+msgstr ""
+
+#: admin/tabs/layouts/multiple-checkbox-relation.php:17
+msgid "Select Relation"
+msgstr ""
+
+#: admin/tabs/layouts/multiple-checkbox-relation.php:17
+msgid "Select Relation."
+msgstr ""
+
+#: admin/tabs/general/default-term.php:5
+msgid "Select Taxonomy Relation"
+msgstr ""
+
+#: admin/tabs/general/taxonomies-terms.php:37
+msgid "Select Terms that you want to show on frontend. Default: 5/ASC ORDER"
+msgstr ""
+
+#: admin/tabs/general/default-term.php:52
+msgid "Select your default term while posts load on frontend. Default: All"
+msgstr ""
+
+#: admin/tabs/general/taxonomies.php:2
+msgid ""
+"Select your taxonomy from dropdown. Taxonomies are sortable with drag & drop "
+"feature. Default: Category"
+msgstr ""
+
+#: admin/tabs/appearance/sorting.php:10
+msgid "Set posts order by setting."
+msgstr ""
+
+#: admin/tabs/appearance/sorting.php:29
+msgid "Set posts order Type."
+msgstr ""
+
+#: admin/tabs/appearance/sorting.php:2
+msgid "Sorting"
+msgstr ""
+
+#: admin/tabs/general/taxonomies.php:2
+msgid "Taxonomy"
+msgstr ""
+
+#: admin/tabs/general/default-term.php:5
+msgid "Taxonomy Relation"
+msgstr ""
+
+#: admin/tabs/general/taxonomies-terms.php:37
+msgid "Terms"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:30
+msgid "Text Transform"
+msgstr ""
+
+#: caf-pro.php:45
+#, php-format
+msgid ""
+"The %1$sFilter Posts By Category PRO %2$s plugin requires %1$sFree "
+"Version%2$s plugin active to run properly. Please install and activate "
+"%1$sFree Version%2$s of this plugin."
+msgstr ""
+
+#: admin/tabs/analytics.php:134
+msgid ""
+"There is no analytics data for this filter yet. Data will load when any user "
+"interact with this filter from frontend."
+msgstr ""
+
+#: admin/tabs/analytics.php:62
+msgid "Total Clicks"
+msgstr ""
+
+#: admin/tabs/appearance/translation.php:2
+msgid "Translation"
+msgstr ""
+
+#. Author of the plugin
+msgid "Trusty Plugins"
+msgstr ""
+
+#: admin/tabs/typography/post-description-typo.php:32
+msgid "Uppercase"
+msgstr ""
+
+#: admin/tabs/advanced/scroll.php:11
+msgid ""
+"When you click on pagination or categories, page scrolls to container div."
+msgstr ""

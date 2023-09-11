@@ -1,0 +1,95 @@
+/**
+ * Post Layout 9 => Masonry Layout
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/post/post-layout9.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+#caf-post-layout9 #manage-post-area{background:#fff!important}#caf-post-layout9 a{transition:all .15s linear;text-decoration:none!important}#caf-post-layout-container #caf-post-layout9 h2:before{display:none}#caf-post-layout-container #caf-post-layout9 h1:before{display:none}#caf-post-layout9 .caf-featured-img-box{display:block;width:100%;height:200px;background-size:cover!important;background-repeat:no-repeat;background-position:center!important}#caf-post-layout9 .caf-col-md-6 .caf-featured-img-box{height:270px}#caf-post-layout9 .caf-post-title{display:block;width:100%;padding:10px 10px}#caf-post-layout9 .caf-post-title h2{text-decoration:none;font-size:18px;line-height:25px;margin:0;padding:0}#caf-post-layout9 .caf-post-title a:hover{color:inherit!important;box-shadow:none!important}#caf-post-layout9 .caf-meta-content-cats{display:block;width:100%;background:#fff;border-bottom:1px solid #f7f7f7}#caf-post-layout9 .caf-meta-content-cats ul{display:inline-block;width:100%;list-style:none;margin:0;padding:0 0 5px 0}#caf-post-layout9 .caf-meta-content-cats li{display:inline-block;padding:0;margin:0;text-decoration:none;line-height:normal}#caf-post-layout9 .caf-meta-content-cats li a{display:inline-block;padding:5px;margin:0;text-decoration:none;text-transform:uppercase;font-size:10px;margin:0 5px;color:#f79918;box-shadow:none}#caf-post-layout9 .caf-meta-content{display:flex;background:#fff;width:100%;padding:5px;border-bottom:1px solid #f7f7f7}#caf-post-layout9 span.author,#caf-post-layout9 span.comment,#caf-post-layout9 span.date{font-size:12px;text-transform:capitalize}#caf-post-layout9 .caf-content{display:block;padding:10px;background:#fff;word-break:break-word;font-size:14px;text-align:justify}#caf-post-layout9 .caf-content-read-more{display:block;background:#fff;padding:5px 10px}#caf-post-layout9 a.caf-read-more{padding:3px 12px;display:inline-block;font-size:15px;margin-bottom:5px;border: 1px solid;}ul#caf-layout-pagination.post-layout9{display:inline-block;list-style:none;margin:0;padding:0;width:100%;text-align:center; padding-top:30px;}ul#caf-layout-pagination.post-layout9 li{display:inline-block;line-height:normal;margin:0;padding:0}ul#caf-layout-pagination.post-layout9 li a{text-decoration:none;background:#333;color:#fff;padding:5px 10px;font-size:16px;border-radius:0;margin-right:1px}ul#caf-layout-pagination.post-layout9 span.page-numbers.current{background:#fff;padding:5px 10px;border-radius:0;color:#333;position:relative;margin-right:1px;font-size:16px}#caf-post-layout9 .manage-layout9{padding:0;}
+
+#caf-post-layout9 .caf-meta-content,#caf-post-layout9 .caf-meta-content-cats,#caf-post-layout9 .caf-content {
+    display: none;
+}
+.acf-masnory {
+    column-count: 3;
+    column-gap: 10px;
+}
+.caf-post-layout9 {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+	position: relative;
+}
+#caf-post-layout9 .caf-post-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #484c61;
+    transition: all 0.35s;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+	transition: all 0.3s;
+}
+.post-layout9 .caf-content-read-more {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    text-align: center;
+    background: transparent !important;
+	transition: all 0.3s;
+}
+.caf-post-layout9:hover .caf-post-title h2 {
+    transition: all 0.3s;
+}
+.caf-post-layout9:hover .caf-post-title h2 {
+    transform: translate3d(0, -50%, 0) translate3d(0, -10px, 0);
+}
+.caf-post-layout9:hover .caf-content-read-more {
+    opacity: 1;
+    transform: translate3d(0, 0, 2);
+	
+	}
+.manage-layout9:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(23 23 23 / 50%);
+    z-index: 0;
+}
+.post-layout9 #manage-ajax-response, .post-layout9 .caf-row {
+    display: inline-block;
+}
+#caf-post-layout9 a.caf-f-link {
+    display: inline-flex;
+    height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+.acf-masnory {
+    column-count: 2;
+}
+}
+@media screen and (max-width: 766px) {
+.acf-masnory {
+    column-count: 1;
+}
+}

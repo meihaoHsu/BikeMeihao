@@ -1,0 +1,145 @@
+/**
+ * Post Layout 7 => Full Rounded Corner
+ *
+ * This template can be overridden by copying it to
+    yourtheme/category-ajax-filter/css/post/post-layout5.css
+ *
+ * HOWEVER, on occasion CAF will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://caf.trustyplugins.com/documentation
+ */
+#caf-post-layout7 a{transition:all .15s linear;text-decoration:none!important}#caf-post-layout-container #caf-post-layout7 h2:before{display:none}#caf-post-layout-container #caf-post-layout7 h1:before{display:none}#caf-post-layout7 .caf-featured-img-box{display:block;width:100%;height:290px;background-size:cover!important;background-repeat:no-repeat;background-position:center!important}#caf-post-layout7 .caf-col-md-6 .caf-featured-img-box{height:270px}#caf-post-layout7 .caf-post-title{display:block;width:100%;padding:10px 10px}#caf-post-layout7 .caf-post-title h2{text-decoration:none;font-size:18px;line-height:1.2em;margin:0;padding:0}#caf-post-layout7 .caf-post-title a:hover{color:inherit!important;box-shadow:none!important}#caf-post-layout7 .caf-meta-content-cats{display:block;width:100%;padding:5px;}#caf-post-layout7 .caf-meta-content-cats ul{display:inline-block;width:100%;list-style:none;margin:0;padding:0 0 5px 0}#caf-post-layout7 .caf-meta-content-cats li{display:inline-block;padding:0;margin:0;text-decoration:none;line-height:normal}#caf-post-layout7 .caf-meta-content-cats li a{display:inline-block;padding:5px;margin:0;text-decoration:none;text-transform:uppercase;font-size:10px;margin:0 5px;color:#f79918;box-shadow:none}#caf-post-layout7 .caf-meta-content{display:flex;width:100%;padding:5px 10px;}#caf-post-layout7 span.author,#caf-post-layout7 span.date,#caf-post-layout7 span.comment{font-size:12px;text-transform:capitalize; padding: 0 5px;}#caf-post-layout7 .caf-content{display:block;padding:10px;word-break:break-word;font-size:14px;text-align:justify}#caf-post-layout7 .caf-content-read-more{display:block;padding:5px 10px; float:right;}#caf-post-layout7 a.caf-read-more{box-shadow:none;text-decoration:none;padding:6px 12px;display:inline-block;font-size:16px;margin-bottom:5px;border:1px solid;border-radius:2px;}#caf-post-layout7 a.caf-read-more:hover{color:#fff!important}ul#caf-layout-pagination.post-layout7{display:inline-block;list-style:none;margin:0;padding:0;width:100%;text-align:center}ul#caf-layout-pagination.post-layout7 li{display:inline-block;line-height:normal;margin:0;padding:0}ul#caf-layout-pagination.post-layout7 li a{text-decoration:none;background:#333;color:#fff;padding:5px 10px;font-size:16px;border-radius:0;margin-right:1px}ul#caf-layout-pagination.post-layout7 span.page-numbers.current{background:#fff;padding:5px 10px;border-radius:0;color:#333;position:relative;margin-right:1px;font-size:16px}#caf-post-layout7 .manage-layout7{padding:0;box-shadow:0 0 8px -5px #000; position:relative;}
+#caf-post-layout7 .manage-layout7 {
+    padding: 2px !important;
+    padding-left: 50px !important;
+    border-radius: 76px;
+	height: 100%;
+}
+#caf-post-layout7 #manage-ajax-response {
+    margin-top: 40px;
+	max-width: 980px !important;
+    margin: auto !important;
+}
+
+#caf-post-layout7 .manage-layout7 {
+    padding: 0;
+    box-shadow: 0 0 8px -5px #ffffff;
+    border: 1px solid #ffffff2e;
+	box-shadow: none;
+	border: none;
+}
+#caf-post-layout7 span.caf-pl-d {
+    font-weight: 800;
+}
+#caf-post-layout7 svg {
+    width: 57px;
+    bottom: auto;
+    left: auto;
+    left: -56px;
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    position: absolute;
+    top: 50%;
+    margin-top: -61px;
+}
+#caf-post-layout7 .caf-featured-section {
+    width: 20%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 50%;
+    margin-top: -48px;
+}
+#caf-post-layout7 #manage-post-area {
+    display: inline-block;
+    width: 80%;
+    background: white;
+    padding: 25px;
+    position: relative;
+    border-radius: 75px;
+}
+#caf-post-layout7 .caf-featured-img-box {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 62px;
+}
+
+#caf-post-layout7 .caf-featured-img-box {
+    border: 3px solid;
+}
+#caf-post-layout7 ul.caf-mb-0 {
+    padding: 0 !important;
+    position: relative;
+    top: -1px;
+}
+#caf-post-layout7 ul.caf-mb-0 li {
+    display: inline-block;
+    padding: 0px 0px;
+}
+#caf-post-layout7 span.sep {
+    margin: 0 6px;
+    border-left: 1px solid #d4dee1;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#caf-post-layout7 .caf-pl-t {
+    font-size: 16px;
+}
+#caf-post-layout7 .caf-pl-d {
+    font-size: 15px;
+    width: 90px;
+    text-align: center;
+    display: block;
+    line-height: 1.2em;
+}
+#caf-post-layout7 ul.caf-mb-0 a {
+    font-size: 12px;
+    position: relative;
+}
+#caf-post-layout7 i.fa.fa-file-text-o {
+    padding-right: 4px;
+    border-right: 1px solid;
+    margin-right: 3px;
+}
+@media screen and (max-width: 900px) {
+#caf-post-layout7 .caf-featured-section {
+    width: 100% !important;
+    margin-top: 30px !important;
+	top:0px;
+}
+#caf-post-layout7 .caf-featured-img-box {
+    width: 190px !important;
+    height: 190px !important;
+    border-radius: 50%!important;
+    margin: auto!important;
+}
+span.caf-pl-d {
+    display: none !important;
+}
+#caf-post-layout7 #manage-post-area {
+    width: 100% !important;
+    margin-top: 80px !important;
+}
+#caf-post-layout7 .manage-layout7 {
+    padding: 2px !important;
+}
+#caf-post-layout7 svg {
+    top: 0 !important;
+    transform: rotate(450deg)!important;
+    -ms-transform: rotate(450deg) !important;
+    -webkit-transform: rotate(450deg) !important;
+    left: 0 !important;
+    right: 0!important;
+    margin: auto!important;
+    margin-top: -84px !important;
+}
+}
+article.caf-post-layout7 a.caf-read-more i {
+    font-family: 'FontAwesome';
+}
