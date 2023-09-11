@@ -11,3 +11,16 @@ Updated: 2023-08-09 09:19:34
 
 */
 
+
+/* 2023/9/1---tank---AI CHAT GPT POSITION */
+@media (max-width: 760px){
+    #mwai-chatbot-default .mwai-input {
+        flex-direction: row !important;
+    }
+}
+
+.P8gokhAqzYbmwRSdIX15 {
+    bottom: 50px !important;
+}
+
+
