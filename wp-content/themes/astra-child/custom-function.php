@@ -100,7 +100,28 @@ class CustomFunction
         add_action('init', [$this,'customer_post_taxonomy'], 0 );//維修站點-自定義分類
         add_action('save_post', [$this, 'save_data_for_custom'],1,100); //儲存自訂內容
 
+
+        add_filter('caf_get_post_read_more_filter', [$this, 'set_product_filter_content'], 999,3);
     }
+    public function set_product_filter_content($output, $data, $post){
+        if($post->post_type == 'product'){
+            $product = wc_get_product($post->ID);
+            $output = '<div class="filter-product-price">'.$product->get_price_html().'</div>';
+        }else if($post->post_type == 'repair') {
+            $repair_title = get_post_meta($post->ID, 'repair_title', 1);
+            $repair_phone = get_post_meta($post->ID, 'repair_phone', 1);
+            $repair_address = get_post_meta($post->ID, 'repair_address', 1);
+
+            $output = '<div class="filter-repair-detail">';
+            $output .= '<div class="repair-detail-title">' . $repair_title . '</div>';
+            $output .= '<div class="repair-detail-phone">' . $repair_phone . '</div>';
+            $output .= '<div class="repair-detail-address">' . $repair_address . '</div>';
+            $output .= '</div>';
+        }
+
+        return $output;
+    }
+
     public function create_custom_post_type(){
         $labels = array(
             'name'               => '維修站點', 'all_items'          => '所有維修站點',
