@@ -29,3 +29,21 @@ $options = get_option( 'mtc-option' );
     <button id="voice-input"><img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18548.png"></img></button>
     <button id="translate-button">translation</button>
 </div>
+
+<div class="">
+    <div id="translate-log-open-wrapper">
+        <button id="translate-log-open">最近對話內容</button>
+    </div>
+    <div id="translate-log-wrapper" style="display: none;">
+        <div id="translate-log-detail">
+            <?php for($i=1;$i<=3;$i++):?>
+            <p class="translate-log">
+                OOOOOOOOOOOOOOO
+            </p>
+            <p class="translate-log">
+                XXXXXXXXXXXXXXXXX
+            </p>
+            <?php endfor;?>
+        </div>
+    </div>
+</div>

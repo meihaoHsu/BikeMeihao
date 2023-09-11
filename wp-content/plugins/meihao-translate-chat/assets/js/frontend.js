@@ -1,4 +1,8 @@
 jQuery(document).ready(function($) {
+    $('#translate-log-open').click(function () {
+        $('#translate-log-wrapper').toggle();
+    })
+
 
     $('#translate-button').click(function() {
         translateFunction();
