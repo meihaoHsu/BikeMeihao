@@ -1,13 +1,8 @@
 jQuery(document).ready(function($) {
-    $('#translate-log-open').click(function () {
-        $('#translate-log-wrapper').toggle();
-    })
-
 
     $('#translate-button').click(function() {
         translateFunction();
     });
-
     $('#changeLanguage').click(function (){
         var inputLanguage = $('#inputLanguage').val();
         var outputLanguage = $('#outputLanguage').val();
@@ -20,15 +15,35 @@ jQuery(document).ready(function($) {
         $("#outputText").text("Speech recognition not supported!");
         $("#voice-input").prop("disabled", true);
     } else {
+        // 初始化語音辨識物件
         const recognition = new SpeechRecognition();
         recognition.interimResults = true;
 
-        recognition.addEventListener("result", function(event) {
-            const transcript = event.results[event.resultIndex][0].transcript;
+        //語音辨識結果顯示
+        recognition.onresult = function(event) {
+            const results = event.results;
+            for (const result of results) {
+                //語音辨識準確度要求
+                if (result.confidence < 0.9) {
+                    results.splice(results.indexOf(result), 1);
+                }
+            }
+            const transcript = results[0].transcript;
             $("#inputText").text(transcript);
             translateFunction();
-        });
 
+        };
+
+        // 判斷用戶是否已講完話
+        recognition.onend = function(event) {
+            // 語音輸入結束
+            $("#voice-input").prop("disabled", false);
+            $("#voice-input").removeClass("btn-danger", true);
+            $("#voice-input").addClass("btn-info", true);
+            $("#voice-input").html('語音輸入');
+        };
+
+        //點擊後觸發開始辨識
         $("#voice-input").on("click", function() {
             recognition.lang = $("#inputLanguage").val();
             recognition.start();
@@ -37,17 +52,7 @@ jQuery(document).ready(function($) {
             $("#voice-input").prop("disabled", true);
             $("#voice-input").removeClass("btn-info", true);
             $("#voice-input").addClass("btn-danger", true);
-            $("#voice-input").html("Listening....");
-
-            setTimeout(function (e) {
-                $("#voice-input").prop("disabled", false);
-                $("#voice-input").removeClass("btn-danger", true);
-                $("#voice-input").addClass("btn-info", true);
-                $("#voice-input").html(btnValue);
-
-                recognition.stop();
-
-            },10000);
+            $("#voice-input").html("請說話...");
 
         });
     }
