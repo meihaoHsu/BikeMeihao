@@ -39,7 +39,7 @@ $options = get_option( 'mtc-option' );
                 <p class="translate-log">
                     OOOOOOOOOOOOOOO
                 </p>
-                <p class="translate-log">
+                <p class="translate-log2">
                     XXXXXXXXXXXXXXXXX
                 </p>
                 <?php endfor;?>
