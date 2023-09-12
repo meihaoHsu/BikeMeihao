@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 
-    $('#translate-log-open').click(function () {
-        $('#translate-log-wrapper').toggle();
-    })
+    // $('#translate-log-open').click(function () {
+    //     $('#translate-log-wrapper').toggle();
+    // })
 
     $('#translate-button').click(function() {
         translateFunction();
@@ -82,3 +82,20 @@ jQuery(document).ready(function($) {
 
 
 });
+const openButton = document.getElementById('translate-log-open');
+        const lightbox = document.getElementById('lightbox');
+        const logWrapper = document.getElementById('translate-log-wrapper');
+
+        // 点击按钮时显示燈箱和內容
+        openButton.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            logWrapper.style.display = 'block';
+        });
+
+        // 点击燈箱背景或非內容区域时隐藏內容
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                logWrapper.style.display = 'none';
+            }
+        });
