@@ -32,7 +32,8 @@ $options = get_option( 'mtc-option' );
         <div id="translate-log-open-wrapper">
             <button id="translate-log-open">最近對話內容</button>
         </div>
-        <div id="translate-log-wrapper" style="display: none;">
+        <div id="lightbox">
+          <div id="translate-log-wrapper" style="display: none;">
             <div id="translate-log-detail">
                 <?php for($i=1;$i<=3;$i++):?>
                 <p class="translate-log">
@@ -44,6 +45,8 @@ $options = get_option( 'mtc-option' );
                 <?php endfor;?>
             </div>
         </div>
+    </div>
+        
     </div>
 
     <button id="translate-button">translation</button>
