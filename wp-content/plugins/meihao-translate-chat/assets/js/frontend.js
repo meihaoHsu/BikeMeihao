@@ -83,19 +83,28 @@ jQuery(document).ready(function($) {
 
 });
 const openButton = document.getElementById('translate-log-open');
-        const lightbox = document.getElementById('lightbox');
-        const logWrapper = document.getElementById('translate-log-wrapper');
+const lightbox = document.getElementById('lightbox');
+const logWrapper = document.getElementById('translate-log-wrapper');
 
-        // 点击按钮时显示燈箱和內容
-        openButton.addEventListener('click', () => {
-            lightbox.style.display = 'block';
-            logWrapper.style.display = 'block';
-        });
 
-        // 点击燈箱背景或非內容区域时隐藏內容
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-                logWrapper.style.display = 'none';
-            }
-        });
+openButton.addEventListener('click', () => {
+    lightbox.style.display = 'block';
+    logWrapper.style.display = 'block';
+    
+    setTimeout(() => {
+        lightbox.style.opacity = '1';
+        logWrapper.style.opacity = '1';
+    }, 10); 
+});
+
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.opacity = '0';
+        logWrapper.style.opacity = '0';
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            logWrapper.style.display = 'none';
+        }, 300); 
+    }
+});
