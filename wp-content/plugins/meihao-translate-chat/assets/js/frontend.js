@@ -85,12 +85,15 @@ jQuery(document).ready(function($) {
 const openButton = document.getElementById('translate-log-open');
 const lightbox = document.getElementById('lightbox');
 const logWrapper = document.getElementById('translate-log-wrapper');
-
+const chatai = document.getElementsByClassName('mwai-open-button');
+console.log(chatai);
 
 openButton.addEventListener('click', () => {
     lightbox.style.display = 'block';
     logWrapper.style.display = 'block';
-    
+    for (let i = 0; i < chatai.length; i++) {
+chatai[i].style.display = 'none';
+}
     setTimeout(() => {
         lightbox.style.opacity = '1';
         logWrapper.style.opacity = '1';
@@ -102,9 +105,13 @@ lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
         lightbox.style.opacity = '0';
         logWrapper.style.opacity = '0';
+         
         setTimeout(() => {
             lightbox.style.display = 'none';
             logWrapper.style.display = 'none';
+            for (let i = 0; i < chatai.length; i++) {
+    chatai[i].style.display = 'block';
+}
         }, 300); 
     }
 });
