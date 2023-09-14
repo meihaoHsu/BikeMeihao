@@ -76,6 +76,9 @@ jQuery(document).ready(function($) {
             if (data.result === '1'){
                 $('#outputText').text('');
                 $('#outputText').text(data.text);
+                $('#translate-log-detail').append(data.log_html);
+            }else if(data.result === '0'){
+                alert(data.text);
             }
         });
     }
