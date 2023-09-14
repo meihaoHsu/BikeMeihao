@@ -1,7 +1,7 @@
 <?php
 $options = get_option( 'mtc-option' );
 if(isset($_SESSION['trans_logs']) && $_SESSION['trans_logs'] !=''){
-    $translate_logs = unserialize($_SESSION['trans_logs']);
+    $translate_logs = array_reverse(unserialize($_SESSION['trans_logs']));
 }else{
     $translate_logs = array();
 }
