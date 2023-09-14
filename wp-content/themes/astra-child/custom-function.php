@@ -100,8 +100,7 @@ class CustomFunction
         add_action('init', [$this,'customer_post_taxonomy'], 0 );//維修站點-自定義分類
         add_action('save_post', [$this, 'save_data_for_custom'],1,100); //儲存自訂內容
 
-
-        add_filter('caf_get_post_read_more_filter', [$this, 'set_product_filter_content'], 999,3);
+        add_filter('caf_get_post_read_more_filter', [$this, 'set_product_filter_content'], 999,3);//客制化filter 顯示內容
     }
     public function set_product_filter_content($output, $data, $post){
         if($post->post_type == 'product'){
