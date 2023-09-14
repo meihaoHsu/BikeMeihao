@@ -1,5 +1,10 @@
 <?php
 $options = get_option( 'mtc-option' );
+if(isset($_SESSION['trans_logs']) && $_SESSION['trans_logs'] !=''){
+    $translate_logs = unserialize($_SESSION['trans_logs']);
+}else{
+    $translate_logs = array();
+}
 ?>
 <div class="pick_lang">
     <select id="inputLanguage" name="inputLanguage">
@@ -8,7 +13,7 @@ $options = get_option( 'mtc-option' );
         <?php endforeach;?>
     </select>
     <button type="button" id="changeLanguage">
-        <img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18630.png"></img>
+        <img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18630.png">
     </button>
     <select id="outputLanguage" name="outputLanguage">
         <?php foreach ($options['translate_languages'] as $langID => $title):?>
@@ -26,7 +31,7 @@ $options = get_option( 'mtc-option' );
 
 </div>
 <div class="enter_btn">
-    <button id="voice-input"><img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18548.png"></img></button>
+    <button id="voice-input"><img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18548.png"></button>
 
     <div class="translate_log">
         <div id="translate-log-open-wrapper">
@@ -35,14 +40,11 @@ $options = get_option( 'mtc-option' );
         <div id="lightbox">
           <div id="translate-log-wrapper" style="display: none;">
             <div id="translate-log-detail">
-                <?php for($i=1;$i<=3;$i++):?>
-                <p class="translate-log">
-                    OOOOOOOOOOOOOOO
-                </p>
-                <p class="translate-log2">
-                    XXXXXXXXXXXXXXXXX
-                </p>
-                <?php endfor;?>
+                <?php foreach($translate_logs as $key => $translate_log):?>
+                    <p class="translate-log" >
+                        <?=$translate_log?>
+                    </p>
+                <?php endforeach;?>
             </div>
         </div>
     </div>
