@@ -25,8 +25,13 @@ class Meihao_translate_chat{
 
         add_action( 'wp_ajax_ajax_translate_text', [$this,'ajax_translate_text'] ); // 210922 抽獎動作
         add_action( 'wp_ajax_nopriv_ajax_translate_text', [$this,'ajax_translate_text'] ); // 210922 抽獎動作
+        add_action( 'init', array( $this, 'init' ), 20 );
     }
-
+    public function init(){
+        session_start([
+            'cookie_lifetime' => 86400,
+        ]);
+    }
     public static function getInstance()
     {
         if(is_null(self::$instance)) {
@@ -45,6 +50,7 @@ class Meihao_translate_chat{
         if(isset($post->post_content)){
             if( has_shortcode($post->post_content,'meihao-translate-chat-frontend')){
                 wp_enqueue_script("meihao-translate-js", Meihao_TRANSLATE_CHAT_URL. 'assets/js/frontend.js', ['jquery'], false, true);
+                wp_enqueue_style("meihao-translate-css", Meihao_TRANSLATE_CHAT_URL. 'assets/css/frontend.css', array(), '1.0');
             }
         }
     }
@@ -67,7 +73,6 @@ class Meihao_translate_chat{
     public function ajax_translate_text(){
         $options = get_option( 'mtc-option' );
         $prompt = $options['prompt']; $openAIKey = $options['openAIKey']; $Language = $options['translate_languages'];
-
         $inputLanguage = $_POST['inputLanguage']; $outputLanguage = $_POST['outputLanguage']; $input_text = $_POST['inputText']; // 輸入的文字
 
         $url = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
@@ -100,19 +105,29 @@ class Meihao_translate_chat{
 
 // 執行 HTTP 請求
         $response = curl_exec($ch);
-        if ($response !== false) {
+        if  ($response !== false) {
             $result = json_decode($response, true);
             if (isset($result['choices'][0]['text'])) {
                 $output_text = $result['choices'][0]['text'];
             }
         }
-        $output = ['result'=>'1','text'=>trim($output_text)];
+
+
+
+
+        if(isset($_SESSION['trans_logs']) && $_SESSION['trans_logs'] !=''){
+            $trans_logs = unserialize($_SESSION['trans_logs']);
+        }
+        $log_html = "<span>$input_text</span><i class='dashicons dashicons-arrow-down-alt'></i><span>".trim($output_text)."</span>";
+        $trans_logs[]=$log_html;
+        $_SESSION['trans_logs']= serialize($trans_logs);
+
+
+
+        $output = ['result'=>'1','text'=>trim($output_text),'log_html'=>"<p class='translate-log'>$log_html</p>"];
 
         echo json_encode($output);
-
         die();
-
-
     }
 }
 
