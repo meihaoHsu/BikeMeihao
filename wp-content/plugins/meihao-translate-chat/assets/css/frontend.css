@@ -1,0 +1,141 @@
+.pick_lang{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#inputLanguage{
+    background-color: #EFB57D;
+    border-radius: 20px;
+    color: black;
+    font-family: Noto Sans TC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    width: 50%
+}
+#outputLanguage{
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    color: black;
+    font-family: Noto Sans TC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    width: 50%
+
+}
+#inputText{
+    background-color: #EFB57D;
+    border-radius: 30px;
+    min-height: 150px;
+
+}
+.result{
+    font-family: Noto Sans TC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    color: #00612C;
+    margin-left: 10px;
+}
+#outputText{
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    min-height: 150px;
+}
+.enter_btn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+#translate-button{
+    padding: 11px;
+    background-color: #A5E143 !important;
+    border-radius: 30px;
+    font-family: Noto Sans TC;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+#voice-input{
+    background-color: transparent;
+    color: black !important;
+}
+#changeLanguage{
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 0.3s ease;
+}
+
+#translate-log-wrapper {
+    background-color: #EBFFCB !important;
+    width: 80%;
+    max-width: 600px;
+    max-height: 400px;
+    overflow-x: auto;
+    position: absolute;
+    top:150px;
+    right: 0px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 100000 !important;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /*transform: translateX(100%); */
+    /*transition: transform 0.3s ease; */
+}
+.translate-log:nth-child(odd){
+    color: #00612C;
+    background-color: #EFB57D;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Noto Sans TC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    display:grid;
+}
+.translate-log:nth-child(even){
+    color: #00612C;
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Noto Sans TC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    display:grid;
+}
+.translate_log{
+    position: absolute;
+    right: 0;
+    top:15%;
+}
+.translate_log button{
+    background-color: #A1A1A1 !important;
+    border-radius: 20px;
+}
+.dashicons-arrow-down-alt{
+    font-size: 15px;
+    place-self: center;
+    line-height: unset;
+}
