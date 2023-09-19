@@ -105,16 +105,17 @@ class CustomFunction
     public function set_product_filter_content($output, $data, $post){
         if($post->post_type == 'product'){
             $product = wc_get_product($post->ID);
-            $output = '<div class="filter-product-price">'.$product->get_price_html().'</div>';
+            $output = '<a href="'.$product->get_permalink().'"><div class="filter-product-price">'.$product->get_price_html().'</div></a>';
         }else if($post->post_type == 'repair') {
             $repair_title = get_post_meta($post->ID, 'repair_title', 1);
             $repair_phone = get_post_meta($post->ID, 'repair_phone', 1);
             $repair_address = get_post_meta($post->ID, 'repair_address', 1);
 
+            $link = 'https://www.google.com/maps/place/'.urlencode($repair_address);
             $output = '<div class="filter-repair-detail">';
             $output .= '<div class="repair-detail-title">' . $repair_title . '</div>';
-            $output .= '<div class="repair-detail-phone">' . $repair_phone . '</div>';
-            $output .= '<div class="repair-detail-address">' . $repair_address . '</div>';
+            $output .= '<a href="tel:'.$repair_phone.'"><div class="repair-detail-phone">' . $repair_phone . '</div></a>';
+            $output .= '<a href="'.$link.'" target="_blank"><div class="repair-detail-address">' . $repair_address . '</div></a>';
             $output .= '</div>';
         }
 
