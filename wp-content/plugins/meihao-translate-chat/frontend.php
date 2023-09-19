@@ -5,19 +5,22 @@ if(isset($_SESSION['trans_logs']) && $_SESSION['trans_logs'] !=''){
 }else{
     $translate_logs = array();
 }
+$current_lang = apply_filters( 'wpml_current_language', NULL );
+$default_language = ['vi'=>'vi','id'=>'id_ID','zh-hant'=>'zh_TW','en'=>'en_US']; // 當前語系預設翻譯用語言
+
 ?>
 <div class="pick_lang">
     <select id="inputLanguage" name="inputLanguage">
         <?php foreach ($options['translate_languages'] as $langID => $title):?>
-            <option value="<?=$langID?>"><?=$title?></option>
+            <option value="<?=$langID?>" <?=($default_language[$current_lang] == $langID)?'selected':''?> ><?=$title?></option>
         <?php endforeach;?>
     </select>
     <button type="button" id="changeLanguage">
-        <img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18630.png">
+        <img src="<?= plugin_dir_url( __FILE__ ) . 'image/Frame-18630.png'; ?>">
     </button>
     <select id="outputLanguage" name="outputLanguage">
         <?php foreach ($options['translate_languages'] as $langID => $title):?>
-            <option value="<?=$langID?>"><?=$title?></option>
+            <option value="<?=$langID?>" <?=('zh_TW' == $langID)?'selected':'' ?> ><?=$title?></option>
         <?php endforeach;?>
     </select>
 </div>
@@ -31,7 +34,7 @@ if(isset($_SESSION['trans_logs']) && $_SESSION['trans_logs'] !=''){
 
 </div>
 <div class="enter_btn">
-    <button id="voice-input"><img src="http://bike.meihao.shopping/wp-content/uploads/2023/09/Frame-18548.png"></button>
+    <button id="voice-input"><img src="<?= plugin_dir_url( __FILE__ ) . 'image/Frame-18548.png'; ?>"></button>
 
     <div class="translate_log">
         <div id="translate-log-open-wrapper">
