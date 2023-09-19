@@ -59,10 +59,6 @@
     font-style: normal;
     font-weight: 700;
 }
-#voice-input{
-    background-color: transparent;
-    color: black !important;
-}
 #changeLanguage{
     background-color: transparent;
     padding: 0;
@@ -138,4 +134,36 @@
     font-size: 15px;
     place-self: center;
     line-height: unset;
+}
+.voice-button{
+    background-image: url("https://bike.meihao.shopping/wp-content/plugins/meihao-translate-chat/image/Frame-18548.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100px;
+    padding: 10px 0;
+}
+.recoding-button{
+    background-image:unset;
+    background-color: red !important;
+    border-radius: 35px;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 50px;
+    height: 50px;
+    margin: 25px 0;
+    align-self: center;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+    }
+    65%{
+        box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+    }
+    90%{
+        box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+    }
 }

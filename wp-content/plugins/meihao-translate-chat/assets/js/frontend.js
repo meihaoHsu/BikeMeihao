@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
         $("#outputText").text("Speech recognition not supported!");
         $("#voice-input").prop("disabled", true);
     } else {
+        let Default_button_image = $('#voice-input').html();
         // 初始化語音辨識物件
         const recognition = new SpeechRecognition();
         recognition.interimResults = true;
@@ -44,7 +45,8 @@ jQuery(document).ready(function($) {
             $("#voice-input").prop("disabled", false);
             $("#voice-input").removeClass("btn-danger", true);
             $("#voice-input").addClass("btn-info", true);
-            $("#voice-input").html('語音輸入');
+            $("#voice-input").removeClass('recoding-button');
+            $("#voice-input").addClass('voice-button');
         };
 
         //點擊後觸發開始辨識
@@ -56,8 +58,8 @@ jQuery(document).ready(function($) {
             $("#voice-input").prop("disabled", true);
             $("#voice-input").removeClass("btn-info", true);
             $("#voice-input").addClass("btn-danger", true);
-            $("#voice-input").html("請說話...");
-
+            $("#voice-input").removeClass('voice-button');
+            $("#voice-input").addClass('recoding-button');
         });
     }
 

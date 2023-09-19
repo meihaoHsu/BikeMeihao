@@ -34,7 +34,7 @@ $default_language = ['vi'=>'vi','id'=>'id_ID','zh-hant'=>'zh_TW','en'=>'en_US'];
 
 </div>
 <div class="enter_btn">
-    <button id="voice-input"><img src="<?= plugin_dir_url( __FILE__ ) . 'image/Frame-18548.png'; ?>"></button>
+    <button id="voice-input" class="voice-button"></button>
 
     <div class="translate_log">
         <div id="translate-log-open-wrapper">
